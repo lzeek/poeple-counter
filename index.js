@@ -16,12 +16,20 @@ function incrementCount(){
 }
 
 function resetCounter(){
-    peopleTotal=0
-    peopleGroups=0
-    peopleNum.textContent=peopleTotal
-    lastCountNum.textContent=''
-    errorDisplay.textContent=''
-    peopleCounted.textContent=0
+
+    let confirmReset=prompt(
+        'All data will be erased are your sure you want to do this? Type "Y" for yes and "N" for no'
+        )
+
+    if(confirmReset=='Y' || confirmReset=='y'){
+         peopleTotal=0
+         peopleGroups=0
+         peopleNum.textContent=peopleTotal
+         lastCountNum.textContent=''
+         errorDisplay.textContent=''
+         peopleCounted.textContent=0
+    }
+    
 }
 
 function saveCount(){
